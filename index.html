@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bartek Buła - Portfolio</title>
+    <title>Bartek - Portfolio</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -81,6 +81,16 @@
             z-index: 9999;
             transform: translateY(100%);
         }
+        /* Animacja dla tagów technologii */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .tech-tag {
+            animation: float 6s ease-in-out infinite;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -103,12 +113,12 @@
         <div class="flex flex-col min-h-screen p-4 sm:p-8">
             <header>
                 <nav class="flex justify-between items-center text-lg">
-                    <a href="portfolio.html" class="page-transition-link z-50 group">
+                    <div class="z-50">
                         <svg class="h-10 w-10 text-black" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="50" cy="50" r="48" class="stroke-current group-hover:fill-black transition-colors duration-300" stroke-width="4"/>
-                            <text x="50" y="50" font-family="Inter, sans-serif" font-weight="900" font-size="40" text-anchor="middle" dy=".3em" class="fill-current group-hover:fill-white transition-colors duration-300">BB</text>
+                            <circle cx="50" cy="50" r="48" class="stroke-current" stroke-width="4"/>
+                            <text x="50" y="50" font-family="Inter, sans-serif" font-weight="900" font-size="40" text-anchor="middle" dy=".3em" class="fill-current">BB</text>
                         </svg>
-                    </a>
+                    </div>
                     <ul class="hidden md:flex space-x-12 font-medium">
                         <li><a href="#projekty" class="nav-link hover:text-gray-500 transition-colors">Projekty</a></li>
                         <li><a href="#omnie" class="nav-link hover:text-gray-500 transition-colors">O mnie</a></li>
@@ -200,7 +210,7 @@
                     </div>
                     <div class="md:col-span-2 about-item">
                         <p class="text-xl sm:text-2xl font-medium text-gray-700 leading-relaxed">
-                            Jestem kreatywnym deweloperem z pasją do tworzenia pięknych i funkcjonalnych interfejsów użytkownika. Specjalizuję się w nowoczesnych technologiach frontendowych i zawsze dążę do pisania czystego, wydajnego kodu.
+                            Hej, jestem Bartek! Jestem kreatywnym deweloperem z pasją do tworzenia pięknych i funkcjonalnych interfejsów użytkownika. Specjalizuję się w nowoczesnych technologiach frontendowych i zawsze dążę do pisania czystego, wydajnego kodu.
                         </p>
                         <p class="mt-6 text-lg text-gray-600 leading-relaxed">
                             W wolnym czasie eksploruję nowe biblioteki JavaScript, eksperymentuję z animacjami i szukam inspiracji w świecie designu. Moim celem jest łączenie estetyki z użytecznością, aby dostarczać produkty, które nie tylko świetnie wyglądają, ale są też intuicyjne w obsłudze.
@@ -210,13 +220,10 @@
                 <div class="mt-16 sm:mt-24 about-item">
                      <h3 class="text-2xl font-bold mb-6 text-gray-800">Technologie, z którymi pracuję:</h3>
                      <div class="flex flex-wrap gap-3 sm:gap-4">
-                        <span class="bg-white text-black font-semibold px-4 py-2 rounded-full shadow-sm">JavaScript (ES6+)</span>
-                        <span class="bg-white text-black font-semibold px-4 py-2 rounded-full shadow-sm">React & Next.js</span>
-                        <span class="bg-white text-black font-semibold px-4 py-2 rounded-full shadow-sm">Vue.js</span>
-                        <span class="bg-white text-black font-semibold px-4 py-2 rounded-full shadow-sm">Tailwind CSS</span>
-                        <span class="bg-white text-black font-semibold px-4 py-2 rounded-full shadow-sm">GSAP</span>
-                        <span class="bg-white text-black font-semibold px-4 py-2 rounded-full shadow-sm">Figma</span>
-                        <span class="bg-white text-black font-semibold px-4 py-2 rounded-full shadow-sm">Node.js</span>
+                        <span class="tech-tag bg-white text-black font-semibold px-4 py-2 rounded-full shadow-sm">JavaScript (ES6+)</span>
+                        <span class="tech-tag bg-white text-black font-semibold px-4 py-2 rounded-full shadow-sm">React & Next.js</span>
+                        <span class="tech-tag bg-white text-black font-semibold px-4 py-2 rounded-full shadow-sm">Tailwind CSS</span>
+                        <span class="tech-tag bg-white text-black font-semibold px-4 py-2 rounded-full shadow-sm">Figma</span>
                      </div>
                 </div>
             </div>
@@ -231,7 +238,7 @@
                     </p>
                 </div>
                 <div class="mt-12 max-w-xl mx-auto">
-                    <form id="contact-form" action="https://formspree.io/f/xeorlrlo" method="POST" class="grid grid-cols-1 gap-y-6">
+                    <form id="contact-form" action="https://formspree.io/f/TWOJ_UNIKALNY_KOD" method="POST" class="grid grid-cols-1 gap-y-6">
                         <div class="contact-item">
                             <label for="full-name" class="sr-only">Imię i nazwisko</label>
                             <input type="text" name="full-name" id="full-name" autocomplete="name" class="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md" placeholder="Imię i nazwisko" required>
@@ -259,9 +266,9 @@
             <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-md font-medium text-gray-500">
                 <p>Portfolio &copy; 2024</p>
                 <div class="flex space-x-8 mt-4 md:mt-0">
-                    <a href="#" class="hover:text-black transition-colors">LinkedIn</a>
-                    <a href="#" class="hover:text-black transition-colors">GitHub</a>
-                    <a href="#" class="hover:text-black transition-colors">Twitter</a>
+                    <a href="https://www.linkedin.com/in/bartek-bu%C5%82a-233208362/" target="_blank" rel="noopener noreferrer" class="hover:text-black transition-colors">LinkedIn</a>
+                    <a href="https://github.com/mlodyb10" target="_blank" rel="noopener noreferrer" class="hover:text-black transition-colors">GitHub</a>
+                    <a href="https://www.instagram.com/bulakid/" target="_blank" rel="noopener noreferrer" class="hover:text-black transition-colors">Instagram</a>
                 </div>
             </div>
         </footer>
@@ -300,6 +307,10 @@
                     opacity: 1, y: 0, duration: 1, ease: 'power3.out',
                     scrollTrigger: { trigger: item, start: 'top 85%', toggleActions: 'play reverse play reverse' }
                 });
+            });
+
+            document.querySelectorAll('.tech-tag').forEach(tag => {
+                tag.style.animationDelay = `${Math.random() * 5}s`;
             });
 
             function setupPageTransitions() {
