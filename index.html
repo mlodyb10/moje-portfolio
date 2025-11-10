@@ -84,6 +84,11 @@
         }
 
         /* --- NOWE STYLE DLA STOPKI --- */
+        ul.example-2 {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
         .example-2 {
             display: flex;
             justify-content: center;
@@ -150,17 +155,27 @@
         .example-2 .icon-content a:hover .filled {
             height: 100%;
         }
+
         .example-2 .icon-content a[data-social="linkedin"] .filled,
         .example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
             background-color: #0274b3;
         }
+
         .example-2 .icon-content a[data-social="github"] .filled,
         .example-2 .icon-content a[data-social="github"] ~ .tooltip {
             background-color: #24262a;
         }
         .example-2 .icon-content a[data-social="instagram"] .filled,
         .example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
-            background: linear-gradient(45deg, #405de6, #5b51db, #b33ab4, #c135b4, #e1306c, #fd1f1f);
+            background: linear-gradient(
+                45deg,
+                #405de6,
+                #5b51db,
+                #b33ab4,
+                #c135b4,
+                #e1306c,
+                #fd1f1f
+            );
         }
     </style>
 </head>
@@ -227,7 +242,7 @@
                                         <h3 class="text-3xl sm:text-5xl font-bold">Aplikacja do śledzenia budżetu</h3>
                                     </div>
                                     <div class="flex items-center space-x-4 md:space-x-8">
-                                        <p class="hidden lg:block text-lg font-medium text-gray-500 text-right">Web Design,<br>Development</p>
+                                        <p class="hidden lg:block text-lg font-medium text-gray-500 text-right">Narzędzie,<br>Development</p>
                                         <div class="project-button">
                                             <span class="text-left leading-tight">Zobacz<br>projekt</span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="project-button-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -246,10 +261,10 @@
                                 <div class="flex justify-between items-center">
                                     <div class="flex items-baseline space-x-4 sm:space-x-8">
                                         <span class="text-xl font-medium text-gray-400">02</span>
-                                        <h3 class="text-3xl sm:text-5xl font-bold">Inna Realizacja</h3>
+                                        <h3 class="text-3xl sm:text-5xl font-bold">Aura Landing Page</h3>
                                     </div>
                                     <div class="flex items-center space-x-4 md:space-x-8">
-                                        <p class="hidden lg:block text-lg font-medium text-gray-500 text-right">Branding,<br>Aplikacja Mobilna</p>
+                                        <p class="hidden lg:block text-lg font-medium text-gray-500 text-right">Web Design,<br>Scrollytelling</p>
                                         <div class="project-button">
                                             <span class="text-left leading-tight">Zobacz<br>projekt</span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="project-button-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -679,4 +694,3 @@
     </script>
 </body>
 </html>
-
