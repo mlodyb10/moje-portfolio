@@ -188,6 +188,8 @@
     <div id="mobile-menu" class="fixed inset-0 z-40 flex flex-col items-center justify-center">
         <button id="close-menu-button" class="absolute top-4 right-4 sm:top-8 sm:right-8 text-4xl font-bold">&times;</button>
         <ul class="text-center space-y-8">
+            <!-- DODANY LINK MOBILNY -->
+            <li><a href="https://memory-game-theta-mauve.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-4xl font-bold text-blue-500">Zagraj!</a></li>
             <li><a href="#projekty" class="mobile-nav-link text-4xl font-bold">Projekty</a></li>
             <li><a href="#omnie" class="mobile-nav-link text-4xl font-bold">O mnie</a></li>
             <li><a href="#kontakt" class="mobile-nav-link text-4xl font-bold">Kontakt</a></li>
@@ -198,21 +200,34 @@
 
         <div class="flex flex-col min-h-screen p-4 sm:p-8">
             <header>
-                <nav class="flex justify-between items-center text-lg">
+                <!-- POPRAWKA CENTROWANIA: Dodane 'relative' do <nav> -->
+                <nav class="relative flex justify-between items-center text-lg">
                     <div class="z-50">
                         <svg class="h-10 w-10 text-black" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="50" cy="50" r="48" class="stroke-current" stroke-width="4"/>
                             <text x="50" y="50" font-family="Inter, sans-serif" font-weight="900" font-size="40" text-anchor="middle" dy=".3em" class="fill-current">BB</text>
                         </svg>
                     </div>
-                    <ul class="hidden md:flex space-x-12 font-medium">
-                        <li><a href="#projekty" class="nav-link hover:text-gray-500 transition-colors">Projekty</a></li>
-                        <li><a href="#omnie" class="nav-link hover:text-gray-500 transition-colors">O mnie</a></li>
-                        <li><a href="#kontakt" class="nav-link hover:text-gray-500 transition-colors">Kontakt</a></li>
-                    </ul>
-                    <a href="#kontakt" class="nav-link hidden md:inline-block bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800">
-                        Zacznijmy
-                    </a>
+
+                    <!-- POPRAWKA CENTROWANIA: Nowy wrapper dla <ul. z pozycjonowaniem absolutnym -->
+                    <div class="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+                        <ul class="flex space-x-12 font-medium">
+                            <li><a href="#projekty" class="nav-link hover:text-gray-500 transition-colors">Projekty</a></li>
+                            <li><a href="#omnie" class="nav-link hover:text-gray-500 transition-colors">O mnie</a></li>
+                            <li><a href="#kontakt" class="nav-link hover:text-gray-500 transition-colors">Kontakt</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- POPRAWKA CENTROWANIA: Dodane 'z-50' do grupy przycisków -->
+                    <div class="hidden md:flex items-center space-x-4 z-50">
+                        <a href="https://memory-game-theta-mauve.vercel.app/" target="_blank" rel="noopener noreferrer" class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-colors font-medium">
+                            Zagraj!
+                        </a>
+                        <a href="#kontakt" class="nav-link bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 font-medium">
+                            Zacznijmy
+                        </a>
+                    </div>
+                    
                     <button id="open-menu-button" class="md:hidden font-bold z-50">Menu</button>
                 </nav>
             </header>
