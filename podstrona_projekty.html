@@ -272,12 +272,19 @@
             }
 
             const transitionOverlay = document.getElementById('transition-overlay');
-            gsap.to(transitionOverlay, { 
-                y: '-100%', 
-                duration: 1, 
+            gsap.to(transitionOverlay, {
+                y: '-100%',
+                duration: 1,
                 ease: 'power3.inOut',
             });
-            
+
+            window.addEventListener('pageshow', (e) => {
+                if (e.persisted) {
+                    gsap.set(transitionOverlay, { y: '100%' });
+                    gsap.to(transitionOverlay, { y: '-100%', duration: 1, ease: 'power3.inOut' });
+                }
+            });
+
             document.querySelectorAll('.page-transition-link').forEach(link => {
                 link.addEventListener('click', (e) => {
                     e.preventDefault();
